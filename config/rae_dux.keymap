@@ -92,7 +92,7 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 16 17 18 19 20 21 22 23 24 30 31 32 33 34 35>;
         };
 
-        base_lt: base_layer_hold_tap {
+        blt: base_layer_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "BASE_LAYER_HOLD_TAP";
             #binding-cells = <2>;
@@ -118,16 +118,17 @@
 	keymap {
 		compatible = "zmk,keymap";
 
-		base_layer {
+		/*&                                                                                 |                                                                                  &*/
+        base_layer {
 			bindings = <
                    &kp Q        &kp W         &kp F              &kp P              &kp G              &kp J              &kp L               &kp U                 &kp Y         &kp APOS
                    &kp A        &lhm LCMD R   &lhm LSHFT S       &lhm LCTRL T       &lhm LALT D        &rhm RALT H        &rhm LCTRL N        &rhm RSHFT E          &rhm RCMD I   &kp O
                    &kp Z        &kp X         &kp C              &kp V              &kp B              &kp K              &kp M               &kp COMMA             &kp DOT       &kp FSLH
-				 /*&            &*/           &base_lt NAV_L TAB &base_lt SYM_L SPC &base_lt NUM_L ESC &base_lt NUM_L BSPC &base_lt SYM_L DEL &base_lt NAV_L RET  /*&             &*/
+				 /*&            &*/           &blt NAV_L TAB     &blt SYM_L SPC     &blt NUM_L ESC     &blt NUM_L BSPC    &blt SYM_L DEL      &blt NAV_L RET   /*&             &*/
 			>;
 		};
 
-        /*&                                                                                 |                                                                                          &*/
+        /*&                                                                                 |                                                                                  &*/
 		sym_layer {
 			bindings = <
                    &kp APOS     &kp LT        &kp GT        &kp DQT            &kp AMPS           &scope              &kp DOT          &kp LBRC                 &kp RBRC      &kp PRCNT
@@ -139,10 +140,10 @@
 
 		num_layer {
 			bindings = <
-                   &kp UNDER    &kp N6        &kp N5        &kp N4             &kp PLUS           &kp STAR            &kp F4           &kp F5                   &kp F6        &kp F10
-                   &kp DOT      &kp N3        &kp N2        &kp N1             &kp MINUS          &kp LSHFT           &kp F1           &kp F2                   &kp F3        &kp F11
-                   &kp COMMA    &kp N9        &kp N8        &kp N7             &kp EQUAL          &kp COLON           &kp F7           &kp F8                   &kp F9        &kp F12
-				 /*&            &*/           &trans        &trans             &kp N0             &kp N0              &trans           &trans                 /*&             &*/
+                   &trans       &kp F7        &kp F8        &kp F9             &kp F10            &kp FSLH            &kp N7           &kp N8                   &kp N5        &kp STAR
+                   &trans       &kp F4        &kp F5        &kp F6             &kp F11            &kp EQUAL           &kp N4           &kp N5                   &kp N4        &kp MINUS
+                   &trans       &kp F1        &kp F2        &kp F3             &kp F12            &kp DOT             &kp N1           &kp N2                   &kp N3        &kp PLUS
+				 /*&            &*/           &trans        &trans             &trans             &trans              &trans           &kp N0                 /*&             &*/
 			>;
 		};
 
