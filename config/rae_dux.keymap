@@ -149,8 +149,8 @@
 
 		nav_layer {
 			bindings = <
-                   &trans       &trans        &bt BT_PRV    &bt BT_NXT         &bt BT_CLR         &trans              &trans           &kp UP                   &trans        &kp HOME
-                   &sk LALT     &sk LGUI      &sk LSHFT     &sk LCTRL          &trans             &trans              &kp LEFT         &kp DOWN                 &kp RIGHT     &kp END
+                   &trans       &trans        &bt BT_PRV    &bt BT_NXT         &bt BT_CLR         &kp PG_UP           &trans           &kp UP                   &trans        &kp HOME
+                   &sk LALT     &sk LGUI      &sk LSHFT     &sk LCTRL          &trans             &kp PG_DN           &kp LEFT         &kp DOWN                 &kp RIGHT     &kp END
                    &trans       &kp CUT       &kp COPY      &kp PASTE          &trans             &trans              &trans           &trans                   &trans        &trans
 				 /*&            &*/           &trans        &trans             &trans             &trans              &trans           &trans             /*&             &*/
 			>;
