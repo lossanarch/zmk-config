@@ -124,7 +124,7 @@
                    &kp Q        &kp W         &kp F              &kp P              &kp G              &kp J              &kp L               &kp U                 &kp Y         &kp APOS
                    &kp A        &lhm LCMD R   &lhm LSHFT S       &lhm LCTRL T       &lhm LALT D        &rhm RALT H        &rhm LCTRL N        &rhm RSHFT E          &rhm RCMD I   &kp O
                    &kp Z        &kp X         &kp C              &kp V              &kp B              &kp K              &kp M               &kp COMMA             &kp DOT       &kp FSLH
-				 /*&            &*/           &blt NAV_L TAB     &blt SYM_L SPC     &blt NUM_L ESC     &blt NUM_L BSPC    &blt SYM_L DEL      &blt NAV_L RET   /*&             &*/
+				 /*&            &*/           &blt NAV_L TAB     &blt SYM_L SPC     &blt NUM_L ESC     &blt NUM_L DEL     &blt SYM_L BSPC     &blt NAV_L RET   /*&             &*/
 			>;
 		};
 
@@ -149,9 +149,9 @@
 
 		nav_layer {
 			bindings = <
-                   &kp MEH(T)   &trans        &trans        &trans             &bt BT_CLR         &bt BT_PRV          &bt BT_NXT       &kp UP                   &trans        &kp MEH(T)
-                   &sk LALT     &sk LGUI      &sk LSHFT     &sk LCTRL          &trans             &trans              &kp LEFT         &kp DOWN                 &kp RIGHT     &trans
-                   &trans       &kp CUT       &kp COPY      &kp PASTE          &trans             &trans              &kp HOME         &kp K_PREV               &kp K_NEXT    &kp END
+                   &trans       &trans        &bt BT_PRV    &bt BT_NXT         &bt BT_CLR         &trans              &trans           &kp UP                   &trans        &kp HOME
+                   &sk LALT     &sk LGUI      &sk LSHFT     &sk LCTRL          &trans             &trans              &kp LEFT         &kp DOWN                 &kp RIGHT     &kp END
+                   &trans       &kp CUT       &kp COPY      &kp PASTE          &trans             &trans              &trans           &trans                   &trans        &trans
 				 /*&            &*/           &trans        &trans             &trans             &trans              &trans           &trans             /*&             &*/
 			>;
 		};
