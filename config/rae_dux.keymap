@@ -100,7 +100,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             global-quick-tap-ms = <100>;
-            bindings = <&mo>, <&kp>;
+            bindings = <&tog>, <&kp>;
         };
 
         rpt_lt: repeat_hold_tap {
