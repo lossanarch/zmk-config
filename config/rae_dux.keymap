@@ -113,6 +113,17 @@
             global-quick-tap;
             bindings = <&mo>, <&key_repeat>;
         };
+
+        lh: long_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LONG_HOLD";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <1000>;
+            bindings = <&bt>, <&trans>;
+            // hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 30 31 32 33 34 35>;
+            hold-trigger-key-positions = <5 6 7 8 9 10 11 12 13 15 16 17 18 19 25 26 27 28 29 30 31 32 33 34 35>;
+        };
     };
 
 	keymap {
@@ -149,9 +160,9 @@
 
 		nav_layer {
 			bindings = <
-                   &trans       &trans        &bt BT_PRV    &bt BT_NXT         &bt BT_CLR         &kp PG_UP           &trans           &kp UP                   &trans        &kp HOME
+                   &trans       &trans        &bt BT_PRV    &bt BT_NXT         &trans         &kp PG_UP           &trans           &kp UP                   &trans        &kp HOME
                    &sk LALT     &sk LGUI      &sk LSHFT     &sk LCTRL          &trans             &kp PG_DN           &kp LEFT         &kp DOWN                 &kp RIGHT     &kp END
-                   &trans       &kp CUT       &kp COPY      &kp PASTE          &trans             &trans              &trans           &trans                   &trans        &trans
+                  &lh BT_CLR N0 &kp CUT       &kp COPY      &kp PASTE          &trans             &trans              &trans           &trans                   &trans        &trans
 				 /*&            &*/           &trans        &trans             &trans             &trans              &trans           &trans             /*&             &*/
 			>;
 		};
