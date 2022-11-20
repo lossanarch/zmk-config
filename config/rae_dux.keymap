@@ -22,9 +22,9 @@
 #define NUM_L   2
 #define NAV_L   3
 
-#define CUT   LG(X)
-#define COPY  LG(C)
-#define PASTE LG(V)
+#define CUT    LG(X)
+#define COPY   LG(C)
+#define PASTE  LG(V)
 #define MPASTE LS(LG(V)) # paste from cb manager
 
 #define MEH(KEY) LS(LC(LA(LG(KEY))))
@@ -160,11 +160,11 @@
 		};
 
 		nav_layer {
-			bindings = <
+			bindings =  <
                    &trans       &trans        &bt BT_PRV    &bt BT_NXT         &trans             &kp PG_UP           &trans           &kp UP                   &trans        &kp HOME
                    &sk LALT     &sk LGUI      &sk LSHFT     &sk LCTRL          &trans             &kp PG_DN           &kp LEFT         &kp DOWN                 &kp RIGHT     &kp END
                    &lh BT_CLR   &kp CUT       &kp COPY      &kp PASTE          &kp MPASTE         &trans              &trans           &trans                   &trans        &trans
-				 /*&            &*/           &trans        &trans             &trans             &trans              &trans           &trans             /*&             &*/
+				 /*&            &*/           &trans        &trans             &trans             &trans              &trans           &trans                 /*&             &*/
 			>;
 		};
 	};
