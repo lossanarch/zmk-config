@@ -25,8 +25,6 @@
 #define CUT    LG(X)
 #define COPY   LG(C)
 #define PASTE  LG(V)
-// paste from cb manager
-#define MPASTE LS(LG(V))
 
 #define UNDO LG(Z)
 #define REDO LS(LG(Z))
@@ -37,6 +35,13 @@
     macros {
         ZMK_MACRO(scope, wait-ms = <30>; tap-ms = <30>; bindings = <&kp COLON &kp COLON>;)
         ZMK_MACRO(lambda, wait-ms = <30>; tap-ms = <30>; bindings = <&kp L &kp A &kp M &kp B &kp D &kp A>;)
+        ZMK_MACRO(mpaste, 
+            bindings = 
+                <&macro_press &kp LSHFT>,
+                <&macro_tap &sk LCMD &kp V>,
+                <&macro_pause_for_release>,
+                <&macro_release &kp LSHFT>
+            ;)
     };
 
     combos {
@@ -165,7 +170,7 @@
 			bindings =  <
                    &trans       &trans        &bt BT_PRV    &bt BT_NXT         &trans             &kp PG_UP           &trans           &kp UP                   &trans        &kp HOME
                    &trans       &sk LGUI      &sk LSHFT     &sk LCTRL          &sk LALT           &kp PG_DN           &kp LEFT         &kp DOWN                 &kp RIGHT     &kp END
-                   &lh BT_CLR   &kp CUT       &kp COPY      &kp PASTE          &kp MPASTE         &kp REDO            &kp UNDO         &trans                   &trans        &trans
+                   &lh BT_CLR   &kp CUT       &kp COPY      &kp PASTE          &kp mpaste         &kp REDO            &kp UNDO         &trans                   &trans        &trans
 				 /*&            &*/           &trans        &trans             &trans             &trans              &trans           &trans                 /*&             &*/
 			>;
 		};
