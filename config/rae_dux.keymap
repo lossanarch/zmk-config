@@ -21,6 +21,7 @@
 #define SYM_L   1
 #define NUM_L   2
 #define NAV_L   3
+#define GAME_L  4
 
 #define CUT    LG(X)
 #define COPY   LG(C)
@@ -71,6 +72,8 @@
 
         COMBO(minus, &kp MINUS, 31 34, 60)
         COMBO(underscore, &kp UNDER, 32 33, 60)
+
+        COMBO(gaming, &tog GAME_L, 30 31 32 33 34 35, 60)
     };
 
     behaviors {
@@ -120,7 +123,7 @@
             bindings = <&mo>, <&key_repeat>;
         };
 
-        lh: long_hold {
+        lhbt: long_hold_bluetooth {
             compatible = "zmk,behavior-hold-tap";
             label = "LONG_HOLD";
             #binding-cells = <2>;
@@ -166,9 +169,17 @@
 			bindings =  <
                    &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4       &kp PG_UP           &trans           &kp UP                   &trans        &kp HOME
                    &trans       &kp LGUI      &kp LSHFT     &kp LCTRL          &kp LALT           &kp PG_DN           &kp LEFT         &kp DOWN                 &kp RIGHT     &kp END
-                   &lh BT_CLR   &kp CUT       &kp COPY      &kp PASTE          &mpaste            &kp REDO            &kp UNDO         &trans                   &trans        &trans
+                   &lhbt BT_CLR &kp CUT       &kp COPY      &kp PASTE          &mpaste            &kp REDO            &kp UNDO         &trans                   &trans        &trans
 				 /*&            &*/           &trans        &trans             &trans             &trans              &trans           &trans                 /*&             &*/
 			>;
+		};
+
+        game_layer {
+			bindings =  <
+                   &kp T        &kp Q         &kp W              &kp E              &kp R              &kp Y              &kp U               &kp I                 &kp O         &kp P
+                   &kp G        &kp A         &kp S              &kp D              &kp F              &kp H              &kp J               &kp K                 &kp L         &kp RSHFT
+                   &kp B        &kp Z         &kp X              &kp C              &kp V              &kp N              &kp M               &kp RCMD              &kp RALT      &kp RCTRL
+				 /*&            &*/           &blt NAV_L TAB     &blt SYM_L SPC     &blt NUM_L ESC     &blt NUM_L DEL     &blt SYM_L BSPC     &blt NAV_L RET   /*&             &*/			>;
 		};
 	};
 };
