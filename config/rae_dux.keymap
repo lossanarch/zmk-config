@@ -101,6 +101,15 @@
             // hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 16 17 18 19 20 21 22 23 24 30 31 32 33 34 35>;
         };
 
+        mts: mod_tap_space {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_TAP_SPACE";
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
+
         blt: base_layer_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "BASE_LAYER_HOLD_TAP";
@@ -133,11 +142,6 @@
         };
     };
 
-    &mt {
-        tapping-term-ms = <200>;
-        quick-tap-ms = <200>;
-    };
-
 	keymap {
 		compatible = "zmk,keymap";
 
@@ -147,7 +151,7 @@
                    &kp Q        &kp W         &kp E              &kp R              &kp T              &kp Y              &kp U               &kp I                 &kp O         &kp P
                    &kp A        &lhm LCMD S   &blt SYM_L D       &lhm LCTRL F       &lhm LALT G        &rhm RALT H        &rhm LCTRL J        &blt SYM_L K          &rhm RCMD L   &kp SEMICOLON
                    &kp Z        &kp X         &kp C              &kp V              &kp B              &kp N              &kp M               &kp COMMA             &kp DOT       &kp FSLH
-				 /*&            &*/           &blt NAV_L TAB     &mt LSHFT SPC      &blt NUM_L ESC     &blt NUM_L DEL     &mt RSHFT BSPC     &blt NAV_L RET   /*&             &*/
+				 /*&            &*/           &blt NAV_L TAB     &mts LSHFT SPC     &blt NUM_L ESC     &blt NUM_L DEL     &mts RSHFT BSPC     &blt NAV_L RET   /*&             &*/
 			>;
 		};
 
