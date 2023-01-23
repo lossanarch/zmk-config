@@ -104,6 +104,7 @@
         mts: mod_tap_space {
             compatible = "zmk,behavior-hold-tap";
             label = "MOD_TAP_SPACE";
+            #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
