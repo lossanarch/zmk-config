@@ -179,7 +179,7 @@
 			bindings =  <
                    &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4       &kp PG_UP           &trans           &kp UP                   &trans        &kp HOME
                    &trans       &kp LGUI      &kp LSHFT     &kp LCTRL          &kp LALT           &kp PG_DN           &kp LEFT         &kp DOWN                 &kp RIGHT     &kp END
-                   &lhbt BT_CLR &kp CUT       &kp COPY      &kp PASTE          &mpaste            &kp REDO            &kp UNDO         &trans                   &trans        &trans
+                   &lhbt BT_CLR &kp CUT       &kp COPY      &kp PASTE          &mpaste            &kp REDO            &kp UNDO         &kp C_MUTE               &kp C_VOL_DN  &kp C_VOL_UP
 				 /*&            &*/           &trans        &trans             &trans             &trans              &trans           &trans                 /*&             &*/
 			>;
 		};
