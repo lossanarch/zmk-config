@@ -190,7 +190,7 @@
                    &kp TAB      &kp Q         &kp W         &kp E              &kp R              &kp Y              &kp 7               &kp 8                 &kp 9         &kp P
                    &kp LSHIFT   &kp A         &kp S         &kp D              &kp F              &kp H              &kp 4               &kp 5                 &kp 6         &kp RET
                    &kp RET      &kp Z         &kp X         &kp C              &kp V              &kp 0              &kp 1               &kp 2                 &kp 3         &kp RCTRL
-				 /*&            &*/           &kp LCTRL     &kp SPC            &kp ALT            &kp ESC            &kp BSPC            &kp RET             /*&             &*/
+				 /*&            &*/           &kp LCTRL     &kp SPC            &kp LALT           &kp ESC            &kp BSPC            &kp RET             /*&             &*/
             >;
 		};
 	};
